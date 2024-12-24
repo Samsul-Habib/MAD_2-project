@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Mail</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hello, {{ name }}!</h2>
+      <p>Here is the monthly activity report for your campaigns on InfluenceHub.</p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Campaign Title</th>
+            <th>Ads Count</th>
+            <th>Total Ads Expense</th>
+            <th>Campaign Budget</th>
+            <th>Remaining Budget</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for campaign in campaign_info %}
+          <tr>
+            <td>{{ campaign.title }}</td>
+            <td>{{ campaign.ads_count }}</td>
+            <td>${{ campaign.expense }}</td>
+            <td>${{ campaign.budget }}</td>
+            <td>${{ campaign.remaining_budget }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p><strong>Total Ads Count: </strong>{{ total_ads_count }}</p>
+      <p><strong>Total Ads Expense: </strong>${{ total_expense }}</p>
+      <div class="footer">
+        <p>Regards,<br />Team Sponsorlight</p>
+        <p>Contact: sponsorlight@gmail.com</p>
+      </div>
+    </div>
+  </body>
+</html>
