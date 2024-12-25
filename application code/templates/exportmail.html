@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Export Mail</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hello, {{ name }}!</h2>
+      <p>
+        Your monthly campaign report has been successfully exported. Please find
+        the attached CSV file with all the details.
+      </p>
+      <p>Thank you for using Sponsorlight!</p>
+      <div class="footer">
+        <p>Regards,<br />Team Sponsorlight</p>
+        <p>Contact: sponsorlight@gmail.com</p>
+      </div>
+    </div>
+  </body>
+</html>
