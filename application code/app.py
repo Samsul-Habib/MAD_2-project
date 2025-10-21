@@ -71,4 +71,5 @@ def create_roles():
 from application.controllers.controllers import *
 if __name__ == "__main__":
     create_roles()
+
     app.run()
